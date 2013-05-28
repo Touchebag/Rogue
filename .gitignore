@@ -1,0 +1,7 @@
+Rogue.exe
+*.o
+
+# Vim temporary files
+*.swp
+*.swo
+*~
