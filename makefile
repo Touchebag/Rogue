@@ -1,18 +1,17 @@
 ﻿NAME   = Rogue.exe
 
 LIBDIR = lib
-HDIR   = include
+HSRDIR = include
 OBJDIR = src/obj
 SRCDIR = src
 
 OBJS   = $(OBJDIR)/main.o
-FLAGS  = -Wall -I$(HDIR) -L$(LIBDIR)
+FLAGS  = -Wall -Iinclude -Llib
 
 Rogue: $(OBJS)
-	g++ $(FLAGS) -o Rogue.exe $(OBJS) #-lglfw -lopengl34
+	g++ $(FLAGS) -o Rogue.exe $(OBJS) -lglfw -lopengl32
 
 $(OBJDIR)/main.o: $(SRCDIR)/main.cpp 
-	#../include/GL/glfw.h ../include/base.h
 	g++ $(FLAGS) -c $(SRCDIR)/main.cpp -o $(OBJDIR)/main.o
 
 clean:
