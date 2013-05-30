@@ -20,7 +20,7 @@ find_package(OpenGL REQUIRED)
 #find_package(GLFW REQUIRED) # TODO: Fails on linux, wonder why...
 
 include_directories(${OPENGL_INCLUDE_DIRS})
-set(LIBS ${LIBS} ${OPENGL_LIBRARIES} glfw)
+set(LIBS ${LIBS} glfw ${OPENGL_LIBRARIES})
 
 add_executable(Rogue ../src/main.cpp)
 
