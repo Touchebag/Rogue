@@ -5,6 +5,7 @@ using namespace std;
 
 int main(int argc, char **argv){
 
+<<<<<<< HEAD
 	 /* Initialize the library */
     if (!glfwInit())
         	return -1;
@@ -13,6 +14,16 @@ int main(int argc, char **argv){
         return -1;
         
         while (glfwGetWindowParam(GLFW_OPENED))
+=======
+    /* Initialize the library */
+    if (!glfwInit())
+        return -1;
+        
+    if (!glfwOpenWindow(640, 480, 8, 8, 8, 0, 24, 0, GLFW_WINDOW))
+        return -1;
+        
+    while (glfwGetWindowParam(GLFW_OPENED))
+>>>>>>> master
     {
         /* Swap front and back buffers and process events */
         glfwSwapBuffers();

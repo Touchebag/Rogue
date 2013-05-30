@@ -8,3 +8,6 @@ Rogue.exe
 
 # Build directory
 build/
+
+# Batchfiles
+make.bat
