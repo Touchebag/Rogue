@@ -10,6 +10,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
 # Add external library directory
 link_directories(/usr/lib/)
+link_directories(${CMAKE_SOURCE_DIR}/lib)    
 
 # Add include directory
 include_directories(${CMAKE_SOURCE_DIR}/include})
