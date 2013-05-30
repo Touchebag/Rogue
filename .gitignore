@@ -5,3 +5,6 @@ Rogue.exe
 *.swp
 *.swo
 *~
+
+# Build directory
+build/
