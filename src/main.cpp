@@ -5,7 +5,6 @@
 using namespace std;
 
 int main(int argc, char **argv){
-
     /* Initialize the library */
     cout << "Initializing GLFW...";
     if (glfwInit()) {
@@ -32,5 +31,5 @@ int main(int argc, char **argv){
         glfwSwapBuffers();
     }
 
-    return 0;
+	return 0;
 }
