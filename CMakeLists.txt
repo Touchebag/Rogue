@@ -16,7 +16,7 @@ if(WIN32)
 endif(WIN32)
 
 # Add include directory
-include_directories(${CMAKE_SOURCE_DIR}/include})
+include_directories(${CMAKE_SOURCE_DIR}/include)
 
 # Find packages
 find_package(OpenGL REQUIRED)
@@ -25,6 +25,7 @@ find_package(OpenGL REQUIRED)
 include_directories(${OPENGL_INCLUDE_DIRS})
 set(LIBS ${LIBS} glfw ${OPENGL_LIBRARIES})
 
-add_executable(Rogue ../src/main.cpp)
+set(SOURCES ../src/glew.c ../src/main.cpp ../src/shaderprogram.cpp)
+add_executable(Rogue ${SOURCES})
 
 target_link_libraries(Rogue ${LIBS})
