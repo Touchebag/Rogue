@@ -1,6 +1,6 @@
 ﻿#include <iostream>
 #include "../include/GL/glew.h"
-#include "../include/GL/glfw.h"
+#include "../include/GL/glfw3.h"
 //#include "../include/base.h"
 using namespace std;
 
@@ -22,14 +22,21 @@ int main(int argc, char **argv){
         return -1;
     }
 
-    if (!glfwOpenWindow(640, 480, 8, 8, 8, 0, 24, 0, GLFW_WINDOW))
+    GLFWwindow *window = glfwCreateWindow(640, 480, "Hello World!", NULL, NULL);
+
+    if(!window) {
         return -1;
-        
-    while (glfwGetWindowParam(GLFW_OPENED))
-    {
-        /* Swap front and back buffers and process events */
-        glfwSwapBuffers();
     }
 
+    glfwMakeContextCurrent(window);
+        
+    while(!glfwWindowShouldClose(window))
+    {
+        /* Swap front and back buffers and process events */
+        glfwSwapBuffers(window);
+        glfwPollEvents();
+    }
+
+    glfwTerminate();
 	return 0;
 }
