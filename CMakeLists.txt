@@ -8,6 +8,11 @@ project(Rogue)
 # use FindGLFW.cmake and stuff.
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
+# Setting flags for linkinf the C and C++ standard libraries statically.
+set(FLAGS "-static-libgcc -static-libstdc++")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${FLAGS}")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${FLAGS}")
+
 # Add external library directory
 link_directories(/usr/lib/)
 

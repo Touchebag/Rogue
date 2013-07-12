@@ -35,7 +35,7 @@ int main(int argc, char **argv){
         return -1;
     }
 
-    //ShaderProgram *p1 = new ShaderProgram("hej", "hej");
+    ShaderProgram *p1 = new ShaderProgram("hej", "hej");
         
     while(!glfwWindowShouldClose(window))
     {
